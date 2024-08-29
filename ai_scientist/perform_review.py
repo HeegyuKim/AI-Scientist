@@ -330,7 +330,7 @@ Note that while each review is formatted differently according to each reviewer'
     ):
         txt_path = paper.replace(".pdf", ".txt")
         if os.path.exists(txt_path):
-            with open(txt_path, "r") as f:
+            with open(txt_path, "r", encoding="utf-8") as f:
                 paper_text = f.read()
         else:
             paper_text = load_paper(paper)
